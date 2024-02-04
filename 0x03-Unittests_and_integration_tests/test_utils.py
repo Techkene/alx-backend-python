@@ -88,33 +88,33 @@ class TestMemoize(unittest.TestCase):
                     unittest (_type_): _description_
     """
 
-    def test_memoize(self):
+	def test_memoize(self):
         """_summary_
 
         Returns:
                 _type_: _description_
         """
 
-        class TestClass:
+	class TestClass:
+		"""_summary_
+		"""
+
+		def a_method(self):
             """_summary_
-            """
 
-            def a_method(self):
-                """_summary_
-
-                Returns:
-                        _type_: _description_
-                """
+             Returns:
+                     _type_: _description_
+             """
                 return 42
 
-            @memoize
-            def a_property(self):
-                """_summary_
+		@memoize
+        def a_property(self):
+            """_summary_
 
-                Returns:
-                        _type_: _description_
-                """
-                return self.a_method()
+            Returns:
+                    _type_: _description_
+            """
+            return self.a_method()
 
         test_obj = TestClass()
 
